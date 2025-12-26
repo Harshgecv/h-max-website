@@ -7,6 +7,7 @@
 
 </head>
 
+
 <body>
 
 <h1>H-MAX EDUCATIONAL COACHING & CONSULTANCY</h1>
@@ -42,11 +43,64 @@ var submitted = false;
 
 <!-- STATE -->
 <label>State</label><br>
-<input type="text" name="entry.1335270760" required><br><br>
+<select name="entry.1335270760" id="state" required onchange="updateDistricts()">
+
+  
+
+  <option value="">Select State</option>
+
+  <option value="Andhra Pradesh">Andhra Pradesh</option>
+  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+  <option value="Assam">Assam</option>
+  <option value="Bihar">Bihar</option>
+  <option value="Chhattisgarh">Chhattisgarh</option>
+  <option value="Goa">Goa</option>
+  <option value="Gujarat">Gujarat</option>
+  <option value="Haryana">Haryana</option>
+  <option value="Himachal Pradesh">Himachal Pradesh</option>
+  <option value="Jharkhand">Jharkhand</option>
+  <option value="Karnataka">Karnataka</option>
+  <option value="Kerala">Kerala</option>
+  <option value="Madhya Pradesh">Madhya Pradesh</option>
+  <option value="Maharashtra">Maharashtra</option>
+  <option value="Manipur">Manipur</option>
+  <option value="Meghalaya">Meghalaya</option>
+  <option value="Mizoram">Mizoram</option>
+  <option value="Nagaland">Nagaland</option>
+  <option value="Odisha">Odisha</option>
+  <option value="Punjab">Punjab</option>
+  <option value="Rajasthan">Rajasthan</option>
+  <option value="Sikkim">Sikkim</option>
+  <option value="Tamil Nadu">Tamil Nadu</option>
+  <option value="Telangana">Telangana</option>
+  <option value="Tripura">Tripura</option>
+  <option value="Uttar Pradesh">Uttar Pradesh</option>
+  <option value="Uttarakhand">Uttarakhand</option>
+  <option value="West Bengal">West Bengal</option>
+
+  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+  <option value="Chandigarh">Chandigarh</option>
+  <option value="Dadra and Nagar Haveli and Daman and Diu">
+    Dadra and Nagar Haveli and Daman and Diu
+  </option>
+  <option value="Delhi">Delhi</option>
+  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+  <option value="Ladakh">Ladakh</option>
+  <option value="Lakshadweep">Lakshadweep</option>
+  <option value="Puducherry">Puducherry</option>
+
+  
+</select>
+<br><br>
+
+
 
 <!-- DISTRICT -->
-<label>District</label><br>
-<input type="text" name="entry.1033869010" required><br><br>
+<select name="entry.1439068808" id="district" required>
+  <option value="">Select District</option>
+</select>
+
+
 
 <!-- VILLAGE / CITY -->
 <label>Village / City</label><br>
@@ -54,40 +108,34 @@ var submitted = false;
 
 <!-- WORK TYPE -->
 <label>How will you work?</label><br>
-<input type="radio"
- name="entry.297513542"
- value="Local Area Consultant { स्थानीय क्षेत्र सलाहकार }"
- required> Local Area Consultant<br>
+<select name="entry.297513542" required>
+  <option value="">Select an option</option>
+  <option value="Local Area Consultant { स्थानीय क्षेत्र सलाहकार }">
+    Local Area Consultant
+  </option>
+  <option value="School / Coaching based { स्कूल/कोचिंग आधारित }">
+    School / Coaching based
+  </option>
+  <option value="Freelancer / Agent { फ्रीलांसर / एजेंट }">
+    Freelancer / Agent
+  </option>
+  <option value="Student Reference Network { छात्र संदर्भ नेटवर्क }">
+    Student Reference Network
+  </option>
+</select>
+<br><br>
 
-<input type="radio"
- name="entry.297513542"
- value="School / Coaching based { स्कूल/कोचिंग आधारित }">
- School / Coaching based<br>
-
-<input type="radio"
- name="entry.297513542"
- value="Freelancer / Agent { फ्रीलांसर / एजेंट }">
- Freelancer / Agent<br>
-
-<input type="radio"
- name="entry.297513542"
- value="Student Reference Network { छात्र संदर्भ नेटवर्क }">
- Student Reference Network<br><br>
 
 <!-- NETWORK SIZE -->
 <label>How many students are estimated in your network?</label><br>
-<input type="radio"
- name="entry.853165632"
- value="01 - 10"
- required> 01 - 10<br>
+<select name="entry.853165632" required>
+  <option value="">Select number of students</option>
+  <option value="01 - 10">01 - 10</option>
+  <option value="10- 20">10- 20</option>
+  <option value="30+">30+</option>
+</select>
+<br><br>
 
-<input type="radio"
- name="entry.853165632"
- value="10- 20"> 10- 20<br>
-
-<input type="radio"
- name="entry.853165632"
- value="30+"> 30+<br><br>
 
 <!-- EXPERIENCE -->
 <label>Have you worked in admissions/education consultancy before?</label><br>
@@ -106,34 +154,39 @@ var submitted = false;
 
 <!-- COURSES (RADIO – SINGLE SELECT) -->
 <label>What courses can you send students to?</label><br>
-<input type="radio"
- name="entry.592926831"
- value="CBSE Non-Attending (11–12)"
- required> CBSE Non-Attending (11–12)<br>
+<select name="entry.592926831" required>
+  <option value="">Select a course</option>
 
-<input type="radio"
- name="entry.592926831"
- value="Bihar Board (10–12)"> Bihar Board (10–12)<br>
+  <option value="CBSE Non-Attending (11–12)">
+    CBSE Non-Attending (11–12)
+  </option>
 
-<input type="radio"
- name="entry.592926831"
- value="BBOSE (Open Board)"> BBOSE (Open Board)<br>
+  <option value="Bihar Board (10–12)">
+    Bihar Board (10–12)
+  </option>
 
-<input type="radio"
- name="entry.592926831"
- value="ITI (Fitter / Electrician / etc.)"> ITI<br>
+  <option value="BBOSE (Open Board)">
+    BBOSE (Open Board)
+  </option>
 
-<input type="radio"
- name="entry.592926831"
- value="B.Ed"> B.Ed<br>
+  <option value="ITI (Fitter / Electrician / etc.)">
+    ITI (Fitter / Electrician / etc.)
+  </option>
 
-<input type="radio"
- name="entry.592926831"
- value="D.El.Ed"> D.El.Ed<br>
+  <option value="B.Ed">
+    B.Ed
+  </option>
 
-<input type="radio"
- name="entry.592926831"
- value="ANM / GNM / B.Sc Nursing"> Nursing<br><br>
+  <option value="D.El.Ed">
+    D.El.Ed
+  </option>
+
+  <option value="ANM / GNM / B.Sc Nursing">
+    ANM / GNM / B.Sc Nursing
+  </option>
+</select>
+<br><br>
+
 
 <!-- BANK -->
 <label>Bank Name</label><br>
@@ -175,6 +228,11 @@ var submitted = false;
 <button type="submit">Submit</button>
 
 </form>
+
+
+<script src="district.js"></script>
+
+
 
 </body>
 </html>
