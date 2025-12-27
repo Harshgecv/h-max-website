@@ -96,7 +96,7 @@ var submitted = false;
 
 
 <!-- DISTRICT -->
-<select name="entry.1439068808" id="district" required>
+<select name="entry.1033869010" id="district" required>
   <option value="">Select District</option>
 </select>
 
@@ -135,6 +135,9 @@ var submitted = false;
   <option value="30+">30+</option>
 </select>
 <br><br>
+ <!-- for id -->
+
+<input type="hidden" name="entry.747695016" id="consultantId">
 
 
 <!-- EXPERIENCE -->
@@ -153,39 +156,49 @@ var submitted = false;
  value="Maybe"> Maybe<br><br>
 
 <!-- COURSES (RADIO – SINGLE SELECT) -->
-<label>What courses can you send students to?</label><br>
-<select name="entry.592926831" required>
-  <option value="">Select a course</option>
+<label>What courses can you send students to?</label><br><br>
 
-  <option value="CBSE Non-Attending (11–12)">
-    CBSE Non-Attending (11–12)
-  </option>
+<label>
+  <input type="checkbox" name="entry.592926831" value="CBSE Non-Attending (11–12)">
+  CBSE Non-Attending (11–12)
+</label><br>
 
-  <option value="Bihar Board (10–12)">
-    Bihar Board (10–12)
-  </option>
+<label>
+  <input type="checkbox" name="entry.592926831" value="Bihar Board (10–12)">
+  Bihar Board (10–12)
+</label><br>
 
-  <option value="BBOSE (Open Board)">
-    BBOSE (Open Board)
-  </option>
+<label>
+  <input type="checkbox" name="entry.592926831" value="BBOSE (Open Board)">
+  BBOSE (Open Board)
+</label><br>
 
-  <option value="ITI (Fitter / Electrician / etc.)">
-    ITI (Fitter / Electrician / etc.)
-  </option>
+<label>
+  <input type="checkbox" name="entry.592926831" value="ITI (Fitter / Electrician / etc.)">
+  ITI (Fitter / Electrician / etc.)
+</label><br>
 
-  <option value="B.Ed">
-    B.Ed
-  </option>
+<label>
+  <input type="checkbox" name="entry.592926831" value="B.Ed">
+  B.Ed
+</label><br>
 
-  <option value="D.El.Ed">
-    D.El.Ed
-  </option>
+<label>
+  <input type="checkbox" name="entry.592926831" value="D.El.Ed">
+  D.El.Ed
+</label><br>
 
-  <option value="ANM / GNM / B.Sc Nursing">
-    ANM / GNM / B.Sc Nursing
-  </option>
-</select>
-<br><br>
+<label>
+  <input type="checkbox" name="entry.592926831" value="ANM / GNM / B.Sc Nursing">
+  ANM / GNM / B.Sc Nursing
+</label>
+
+<br>
+<label>
+  <input type="checkbox" name="entry.592926831" value="ALL">
+  ALL
+</label>
+<br>
 
 
 <!-- BANK -->
@@ -231,6 +244,8 @@ var submitted = false;
 
 
 <script src="district.js"></script>
+<script src="consultant-id.js"></script>
+
 
 
 
