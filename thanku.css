@@ -1,0 +1,78 @@
+/* ===== PAGE BACKGROUND (SOFT & PROFESSIONAL) ===== */
+body {
+  background: linear-gradient(180deg, #f5f7fb, #e9eef5);
+  overflow-x: hidden;
+}
+
+/* ===== MAIN CARD ===== */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 35px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  animation: fadeUp 0.6s ease;
+}
+
+/* REMOVE any pseudo icons */
+.card::before {
+  display: none !important;
+}
+
+/* ===== HEADINGS ===== */
+.card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== CONSULTANT ID ===== */
+.id {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e3a8a;
+  background: #f1f5ff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 12px 0;
+  letter-spacing: 2px;
+}
+
+/* ===== DOWNLOAD BUTTON (CLASSY) ===== */
+button {
+  margin-top: 22px;
+  padding: 14px 30px;
+  border-radius: 8px;
+  background: #1e3a8a;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: #162d6a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(30,58,138,0.25);
+}
+
+/* ===== SIMPLE ENTRY ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
