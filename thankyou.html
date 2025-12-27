@@ -1,13 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Thank You</title>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
+  <title>Thank You | H-MAX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+
+  <link rel="stylesheet" href="thanku.css">
+</head>
 <body>
-<h1>✅ Thank You!</h1>
-<p>Your registration has been submitted successfully.</p>
-<p>Our team will contact you soon.</p>
+
+<div class="card">
+  <h2>Thank You!</h2>
+  <p>Your Consultant ID is:</p>
+  <div class="id" id="cid">HM----</div>
+  <p>
+    Take the screenshot .<br>
+    Please keep it safe.
+  </p>
+</div>
+<button onclick="downloadPDF()">
+  Download Consultant ID (PDF)
+</button>
+
+
+
+
+<script>
+  const id = localStorage.getItem("CONSULTANT_ID");
+  if (id) {
+    document.getElementById("cid").textContent = id;
+  }
+</script>
+
+
+
+<script>
+function downloadPDF() {
+  // ID page se uthao
+  const consultantId =
+    document.getElementById("cid").textContent || "HM----";
+
+  // Name / Mobile localStorage se
+  const name = localStorage.getItem("CONSULTANT_NAME") || "—";
+  const mobile = localStorage.getItem("CONSULTANT_MOBILE") || "—";
+
+  const today = new Date().toLocaleDateString("en-IN");
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  // ===== HEADER =====
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(16);
+  doc.text("H-MAX EDUCATIONAL COACHING & CONSULTANCY", 20, 30);
+
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(12);
+  doc.text("Authorized Consultant Registration", 20, 40);
+
+  doc.line(20, 45, 190, 45);
+
+  // ===== DETAILS =====
+
+
+  doc.text("Date:", 20, 100);
+  doc.text(today, 80, 100);
+
+  // ===== CONSULTANT ID =====
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(14);
+  doc.text("Consultant ID:", 20, 125);
+
+  doc.setFontSize(26);
+  doc.text(consultantId, 20, 145);
+
+  // ===== FOOTER =====
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(11);
+  doc.text(
+    "Please keep this ID safe for future reference.",
+    20,
+    175
+  );
+
+  doc.setFontSize(10);
+  doc.text(
+    "This document is system generated and does not require signature.",
+    20,
+    285
+  );
+
+  doc.save("Consultant_ID_" + consultantId + ".pdf");
+}
+</script>
+<script>
+document.querySelector("button").addEventListener("click", () => {
+  document.querySelector(".card").style.animation = "popIn .4s ease";
+});
+</script>
+
+
+
+
+  
+
+
 </body>
 </html>
